@@ -6,3 +6,10 @@ name = input("What is your name?")
 
 #print hello to the user
 print( 'Hello ' + name )
+print( "Hello {0}".format(name) )
+print( f"Hello {name}" )
+print( "Hello", name)
+message = "Hello " + name
+print( message )
+name = input("Today is going to be a great day!")
+print("Hello", "there", "jaren", sep="$", end="blah")
