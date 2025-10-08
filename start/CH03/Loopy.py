@@ -18,7 +18,7 @@ def loop_array():
         print(fruit)
 
         def nested_loop():
-    fruits = ["apple" , "banana" , "cherry"]:
+    fruits = ["apple" , "banana" , "cherry"]
     adj = ["shiny", "big", "tasty"]
     for fruit in fruit:
         for a in adj:
