@@ -2,16 +2,7 @@
 # A more complex "Hello World" script in python with Inputs
 # Created 
 
-#input ("Is today a good day Y/N?")
-#if ("Is today a good day? Y/N?") == "Y":
-    #print ("Yes it is")
 
-
-
-
-
-
-
-
-for x in range(10):
-    print("Yeah it is")
+user_input = input("Is today a good day? (y/n) ")
+if user_input.lower() == "y":
+    print("yes it is")
