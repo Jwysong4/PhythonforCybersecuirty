@@ -11,6 +11,7 @@ Ip_prefix = "192.168.0."
 
 #start loop
 for final_octet in range(254):
+    # Build IP address
     ip_addr = Ip_prefix + str(final_octet + 1)
 
 # Find current OS
