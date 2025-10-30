@@ -37,7 +37,7 @@ hash_type = hash_parts[1]
 salt = hash_parts[2]
 
 # Load dictionary file 
-dictionary_list = read_dictionary("Top-1000000.txt")
+dictionary_list = read_dictionary("top10.txt")
 # For each line in dictionary 
 for guess in dictionary_list:
     guess = guess.strip()
@@ -46,7 +46,7 @@ for guess in dictionary_list:
     # is it a match
     if guess_hash == password_hash:
         # Print guess and quit
-        print(f"Password found: {guess}")
+        print(f"Password found: '{guess}'")
         # How to quit script
         sys.exit(0)
 
