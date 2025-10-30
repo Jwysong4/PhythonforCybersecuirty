@@ -11,8 +11,8 @@ from passlib.hash import sha512_crypt
 # functions
 #hash the guess
 def hash_password(hash_type, salt, password):
-    hash_salt = f"${hash_type}${salt}$"
-    my_hash = sha512_crypt.using(rounds=5000).hash(password, hash_salt)
+    #hash_salt = f"${hash_type}${salt}$"
+    my_hash = sha512_crypt.using(rounds=5000).hash(password, salt=salt)
     return my_hash
 #load dictionary file
 def read_dictionary(file_name):
@@ -20,9 +20,9 @@ def read_dictionary(file_name):
     script_path = os.path.abspath( __file__ )
     script_dir = os.path.dirname( script_path )
     #Build file path
-    file_path = os.path.join(script_dir , "file_name")
+    file_path = os.path.join(script_dir , file_name)
     # Create file object
-    f = open("file_path", "r")
+    f = open(file_path, "r")
     #read file object 
     dicitionary_file = f.readlines()
     # Close file object
@@ -37,7 +37,7 @@ hash_type = hash_parts[1]
 salt = hash_parts[2]
 
 # Load dictionary file 
-dictionary_list = read_dictionary("top10.txt")
+dictionary_list = read_dictionary("Top-1000000.txt")
 # For each line in dictionary 
 for guess in dictionary_list:
     guess = guess.strip()
