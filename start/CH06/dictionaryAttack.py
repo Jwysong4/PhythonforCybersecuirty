@@ -37,7 +37,7 @@ hash_type = hash_parts[1]
 salt = hash_parts[2]
 
 # Load dictionary file 
-dictionary_list = read_dictionary("top10.txt")
+dictionary_list = read_dictionary("Top-1000000.txt")
 # For each line in dictionary 
 for guess in dictionary_list:
     guess = guess.strip()
