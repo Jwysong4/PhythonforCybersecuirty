@@ -4,13 +4,18 @@
 # Create by 
 # Import tkinter
 import tkinter
+from tkinter import messagebox
 
 def button_clicked():
     tkinter.Label(
         root,
         text = "Button was clicked"
     ).pack()
-    
+    #update my_label
+    my_label.configure( exit = "Python is awesome", font = ("Courier", 25), fg = "lightyellow", bg = "darkred" )
+    # show message box
+    messagebox.showwarning("System Error", "Warning! Don't push that.")
+
 # Create the GUI main window
 root = tkinter.Tk()
 
